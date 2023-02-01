@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./components/LandinigPage";
 import TailwindTest from "./tailwindTest";
 
 function App() {
@@ -6,7 +7,10 @@ function App() {
     <Router>
       <div className="">
         <Routes>
-          <Route path="/" element={<TailwindTest />} />
+          <Route path="/TailwindTest" element={<TailwindTest />} />
+        </Routes>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
         </Routes>
 
         {/* <header className="text-center">
