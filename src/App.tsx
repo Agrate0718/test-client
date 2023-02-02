@@ -1,30 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LandingPage from "./components/LandinigPage";
-import ViewArtworks from "./components/ViewArtworks";
-import TailwindTest from "./tailwindTest";
+import AllUsersPage from "./components/Pages/AllUsersPage";
+import LandingPage from "./components/Pages/LandingPage";
+import LoginPage from "./components/Pages/LoginPage";
+import RegisterPage from "./components/Pages/RegisterPage";
+import UpdateUserPage from "./components/Pages/UpdateUserPage";
+import ViewArtworks from "./components/Pages/UsersPage";
+import NavBar from "./components/Partials/NavBar";
 
 function App() {
   return (
     <Router>
       <div className="">
-        <Routes>
-          <Route path="/TailwindTest" element={<TailwindTest />} />
-        </Routes>
+        <header>
+          <NavBar />
+        </header>
+
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
         <Routes>
-          <Route path="/View" element={<ViewArtworks />} />
+          <Route path="/Login" element={<LoginPage />} />
         </Routes>
-
-        {/* <header className="text-center">
-        <TailwindTest />
-      </header>
-      <div className=" text-center pt-60">
-        <div className="text-7xl">Zapatoes</div>
-        <div className="text-2xl pt-8 pb-20">A shoe selling site</div>
-      </div> */}
+        <Routes>
+          <Route path="/Register" element={<RegisterPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/Update" element={<UpdateUserPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/All" element={<AllUsersPage />} />
+        </Routes>
       </div>
+      <footer className="border-4 mt-96 border-orange-800">footer</footer>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function TailwindTest() {
+export default function NavBar() {
   return (
     // <div>
     //     <Link to='/'>Home</Link>
@@ -11,19 +11,19 @@ export default function TailwindTest() {
     //     {" | "}
     //     <Link to='/Details'>Details</Link>
     // </div>
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 bg-black">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         {" "}
         {/* <Link to="https://flowbite.com/" className="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> */}
-        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-          Zapatoes
+        <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+          Gallery
         </span>
         {/* </Link> */}
-        <button
+        {/* <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center border-2 border-red-500 p-2 ml-3 text-sm text-white-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -41,13 +41,13 @@ export default function TailwindTest() {
               clipRule="evenodd"
             ></path>
           </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        </button> */}
+        <div className="hidden  w-full md:block md:w-auto" id="navbar-default">
+          <ul className="flex bg-black flex-col p-4 mt-4  rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black">
             <li>
               <Link
                 to="/"
-                className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent  md:p-0 "
                 aria-current="page"
               >
                 Home
@@ -55,26 +55,26 @@ export default function TailwindTest() {
             </li>
             <li>
               <Link
-                to="/Inquiry"
+                to="/Login"
                 className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Inquire
+                Login
               </Link>
             </li>
             <li>
               <Link
-                to="/View"
+                to="/Register"
                 className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                View
+                Register
               </Link>
             </li>
             <li>
               <Link
-                to="/Details"
+                to="/Update"
                 className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                About
+                Update
               </Link>
             </li>
             {/* <li>
