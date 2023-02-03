@@ -11,27 +11,28 @@ function App() {
   return (
     <Router>
       <div className="">
-        <header>
+        <header className=" py-9">
           <NavBar />
         </header>
-
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/Login" element={<LoginPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/Register" element={<RegisterPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/Update" element={<UpdateUserPage />} />
-        </Routes>
-        <Routes>
-          <Route path="/All" element={<AllUsersPage />} />
-        </Routes>
+        <main className="bg-green-500 relative">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/Login" element={<LoginPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/Register" element={<RegisterPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/Update" element={<UpdateUserPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/All" element={<AllUsersPage />} />
+          </Routes>
+        </main>
       </div>
-      <footer className="border-4 mt-96 border-orange-800">footer</footer>
+      {/* <footer className="border-4 mt-96 border-orange-800">footer</footer> */}
     </Router>
   );
 }
